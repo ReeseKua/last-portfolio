@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>4th Quarter - JS Lessons</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+    font-family: 'Gaegu', fantasy;
+    background-image: url("ancient.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+
+.image iframe{
+width:100%;
+height:250px;
+border-radius:15px;
+border:4px solid white;
+}
+
+.back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 12px 20px;
+    background: rgba(0, 255, 255, 1);
+    border: 3px solid white;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    z-index: 999;
+    border-radius: 10px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 10%;
+    min-height: 100vh;
+    border: 4px solid white;
+    border-radius: 15px;
+    margin: 30px 5%;
+    background: rgba(0, 255, 255, 0.5);
+}
+
+.text {width: 55%; font-size: 20px; line-height: 1.6;}
+.image {width: 40%;}
+.image img {width: 100%; border-radius: 15px; border: 4px solid white;}
+
+.title-section {text-align: center; padding: 60px 10%;}
+.title-section h1 {font-size: 80px;}
+
+.particles {position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 50;}
+.particles span {position: absolute; display: block; width: 20px; height: 20px; background: rgba(0, 255, 255, 0.7); border-radius: 50%; opacity: 0.7; animation: float linear infinite;}
+.particles span:nth-child(1){left:5%; animation-duration:10s;}
+.particles span:nth-child(2){left:15%; animation-duration:12s;}
+.particles span:nth-child(3){left:25%; animation-duration:14s;}
+.particles span:nth-child(4){left:35%; animation-duration:16s;}
+.particles span:nth-child(5){left:45%; animation-duration:11s;}
+.particles span:nth-child(6){left:55%; animation-duration:13s;}
+.particles span:nth-child(7){left:65%; animation-duration:15s;}
+.particles span:nth-child(8){left:75%; animation-duration:12s;}
+.particles span:nth-child(9){left:85%; animation-duration:14s;}
+.particles span:nth-child(10){left:95%; animation-duration:16s;}
+
+@keyframes float {0% { transform: translateY(-100px); } 100% { transform: translateY(110vh); }}
+</style>
+
+</head>
+<body>
+
+<a class="back" href="ict.html">Back to Home</a>
+
+<div class="title-section">
+    <h1>4th Quarter</h1>
+    <p>JavaScript Lessons</p>
+</div>
+
+<!-- LESSON 1 -->
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 1: Events & Pop-Up Boxes</h1>
+        <p>Events are triggered by mouse clicks, function calls, keyboard strokes, page load, or form submissions. Event handlers ensure functions respond correctly.</p>
+        <p><strong>Event Triggers:</strong> onclick, onmouseover, onload, onsubmit, etc.</p>
+        <p><strong>Pop-up Boxes:</strong></p>
+        <ul>
+            <li>Alert: <code>alert("message")</code></li>
+            <li>Prompt: <code>prompt("message", "default")</code></li>
+            <li>Confirm: <code>confirm("message")</code></li>
+        </ul>
+    </div>
+    <div class="image"><img src="jss1.png"></div>
+</div>
+
+<!-- LESSON 2 -->
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 2: Conditions, Controls & Loops</h1>
+        <p><strong>Conditional Statements:</strong> if, if-else, if-else-if, nested if, switch</p>
+        <p>Perform actions depending on different conditions.</p>
+        <p><strong>Example:</strong> <code>if(score >= 75){document.write("Passed");} else {document.write("Failed");}</code></p>
+    </div>
+    <div class="image"><img src="jss2.png"></div>
+</div>
+
+<!-- LESSON 3 -->
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 3: Functions</h1>
+        <p>Functions are self-contained code blocks performing specific tasks. Can be called anywhere in the page. Arguments can be passed for processing.</p>
+        <p>Use <code>return</code> to output a value from the function.</p>
+    </div>
+    <div class="image"><img src="jss3.png"></div>
+</div>
+
+<!-- LESSON 4 -->
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 4: Loops</h1>
+        <p>Loops repeat a block of code until a condition is met.</p>
+        <ul>
+            <li>For Loop: known iterations <code>for(var i=0;i<10;i++){...}</code></li>
+            <li>While Loop: condition-based <code>while(condition){...}</code></li>
+            <li>Do-While Loop: executes once, then repeats while condition true</li>
+            <li>For-In Loop: iterate arrays or objects</li>
+        </ul>
+        <p>Break and continue control loop flow.</p>
+    </div>
+    <div class="image"><img src="jss4.png"></div>
+</div>
+
+<!-- LESSON 5 -->
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 5: Strings, Arrays, Date & Math Objects</h1>
+        <p><strong>Strings:</strong> text objects with properties and methods (<code>length, charAt(), slice()</code>)</p>
+        <p><strong>Arrays:</strong> collections of data with methods (<code>push(), pop(), join()</code>)</p>
+        <p><strong>Date Object:</strong> manipulate dates (<code>getDate(), getMonth(), toLocaleString()</code>)</p>
+        <p><strong>Math Object:</strong> calculations (<code>Math.PI, Math.sqrt(), Math.random()</code>)</p>
+    </div>
+    <div class="image"><img src="jss5.png"></div>
+</div>
+
+<!-- LESSON 6 -->
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 6: Timing & Math Object</h1>
+        <p>Timing functions allow delayed or repeated code execution.</p>
+        <ul>
+            <li><code>setTimeout()</code> – executes code after specified milliseconds</li>
+            <li><code>clearTimeout()</code> – cancels a timeout</li>
+        </ul>
+        <p>Math object provides constants and functions for calculations.</p>
+    </div>
+    <div class="image"><img src="jss6.png"></div>
+</div>
+
+<!-- Event Sections -->
+<div class="title-section">
+    <h1>Events</h1>
+    <p>Special events or important moments.</p>
+</div>
+
+<div class="section">
+    <div class="text">
+        <h1>Street Dance</h1>
+        <p>During the Street Dance event, I learned the importance of teamwork and creativity in expressing our culture. I can apply this in real life by participating actively in group activities and school projects. I participated actively by joining the dance practice and performances. If I were to teach this to a classmate, I would explain that collaboration and creativity are key to a successful performance. This event is important because it inspires students to express themselves through art and teamwork.</p>
+        <p><em>Photo Credit: Jade Imperial</em></p>
+    </div>
+    <div class="image"><img src="streetdance.jpg"></div>
+</div>
+
+<div class="section">
+    <div class="text">
+        <h1>Meeting De Avance</h1>
+        <p>During the Meeting De Avance, I learned the value of preparation and confidence when presenting ideas. I can apply this in real life by organizing my work and speaking clearly in class or events. I participated actively by observing speeches and taking notes. If I were to teach this to a classmate, I would explain that confidence and preparation can make any presentation more effective. This event is important because it develops public speaking skills and self-assurance.</p>
+        <p><em>Photo Credit: Jade Imperial</em></p>
+    </div>
+    <div class="image"><img src="meetingdeavance.jpg"></div>
+</div>
+
+<!-- NOLI PLAY -->
+
+<div class="section">
+    <div class="text">
+        <h1>Noli Play</h1>
+        <p>During the Noli Play, I learned how literature and drama can bring historical stories to life. I can apply this in real life by reading and understanding Filipino literature and sharing its lessons. I participated actively by watching the play and discussing its themes. If I were to teach this to a classmate, I would explain that stories from our past can teach important lessons about society and values. This event is important because it preserves and celebrates Filipino literary heritage.</p>
+        <p><em>Photo Credit: Jade Imperial</em></p>
+
+    </div>
+
+    <div class="image">
+        <img src="noliplay.jpg" alt="Noli Play">
+
+        <br><br>
+  <!-- YouTube Video -->
+    <iframe width="100%" height="250"
+src="https://www.youtube.com/embed/BZzZuFfydwI"
+title="Noli Play Video"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+
+
+    </div>
+</div>
+
+<div class="particles">
+<span></span><span></span><span></span><span></span><span></span>
+<span></span><span></span><span></span><span></span><span></span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AP Lessons Interactive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Gaegu', fantasy; background-image: url('stronghold.webp'); background-size: cover; background-attachment: fixed; background-position: center; color: white; }
+
+.back { position: fixed; top: 20px; left: 20px; padding: 12px 20px; background: rgba(128, 128, 128, 1); border: 3px solid white; text-decoration: none; color: black; font-size: 18px; z-index: 3000; border-radius: 10px; display: block; }
+
+.section { display: flex; justify-content: space-between; align-items: flex-start; padding: 80px 10%; min-height: 100vh; border: 4px solid white; border-radius: 15px; margin: 30px 5%; background: rgba(128, 128, 128, 0.5); overflow-y: auto; }
+
+.text { width: 50%; font-size: 18px; line-height: 1.5; }
+.images { width: 45%; display: flex; gap: 10px; flex-wrap: wrap; }
+.images img { width: 48%; border-radius: 15px; border: 3px solid white; }
+
+.title-section { text-align: center; padding: 60px 10%; }
+.title-section h1 { font-size: 70px; }
+
+.quiz-btn { margin-top: 15px; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px; }
+
+#quiz-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 4000; color: white; padding: 20px; text-align: center; overflow-y: auto; }
+#quiz-container input { padding: 10px; margin: 10px 0; font-size: 18px; width: 300px; }
+#quiz-container button { padding: 10px 20px; font-size: 18px; margin-top: 20px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div id="quiz-container">
+    <h1>Solve the 3 Questions to Access the Portfolio</h1>
+    <label>1. Isang estado ng bansa kung saan tinatamasa ng mga tao mula sa pinakamababang uri ng mamamayan ang nakakamanghang pagbabago sa ekonomiya at pamumuhay:</label>
+    <input type="text" id="q1">
+    <label>2. Isang agham at sining na may kinalaman sa pagpaparami ng mga hayop at mga tanim o halaman:</label>
+    <input type="text" id="q2">
+    <label>3. Tumutukoy sa pagproseso ng mga hilaw na materyal at paggawa ng mga produkto na kinakailangan para sa pampublikong pamilihan:</label>
+    <input type="text" id="q3">
+    <button type="button" onclick="checkAnswers()">Submit</button>
+</div>	
+
+<a class="back" href="index.html">Back to Home</a>
+
+<div class="title-section"><h1>Ika-apat Kwarter</h1></div>
+
+<!-- LESSON 1: Pambansang Kaunlaran -->
+<div class="section">
+    <div class="text">
+        <h1>Pambansang Kaunlaran</h1>
+        <p>Isang estado ng bansa kung saan tinatamasa ng mga tao mula sa pinakamababang uri ng mamamayan ang nakakamanghang pagbabago sa ekonomiya at pamumuhay.</p>
+
+        <h2>MGA KONSEPTO NG PAMBANSANG KAUNLARAN</h2>
+        <ul>
+            <li>Pagbabago</li>
+            <li>Pag-unlad</li>
+            <li>Pagsulong</li>
+            <li>Ebolusyon</li>
+        </ul>
+
+        <h3>Pagbabago</h3>
+        <p>Paraan upang maging iba o naiiba. Proseso ng pag-iiba o pagkakaroon ng kaibahan sa lipunan at ekonomiya.</p>
+
+        <h3>Pag-unlad</h3>
+        <p>Pagbabago mula sa mababa tungo sa mataas na antas ng pamumuhay. Ang kaunlaran ay matatamo lamang kung mapauunlad ang yaman ng buhay ng mga tao kaysa sa yaman ng ekonomiya nito.</p>
+
+        <h3>Pagsulong</h3>
+        <p>Pag-usad tungo sa iyong layunin o goal. Pagpapaunlad ng kakayahan, kaalaman, at abilidad upang makasabay sa agos ng buhay.</p>
+
+        <h3>Ebolusyon</h3>
+        <p>Pagbabago sa mga katangian sa loob ng mahabang panahon. Anuman ang unang dumating ay mas mabuti sa sinundang panahon.</p>
+
+        <h2>Dalawang Konsepto ng Pag-unlad (Todaro & Smith, 2012)</h2>
+        <ul>
+            <li><b>Tradisyunal:</b> Pagtamo ng patuloy na pagtaas ng income per capita.</li>
+            <li><b>Makabago:</b> Dapat na kumakatawan sa malawakang pagbabago sa buong sistemang panlipunan.</li>
+        </ul>
+
+        <h2>MGA SALIK NA MAAARING MAKATULONG SA PAGSULONG NG EKONOMIYA</h2>
+        <ul>
+            <li>Likas na yaman</li>
+            <li>Yamang-tao</li>
+            <li>Kapital</li>
+            <li>Teknolohiya at Inobasyon</li>
+        </ul>
+
+        <h2>MGA PALATANDAAN NG PAG-UNLAD</h2>
+        <ul>
+            <li>Makatwiran at dinamikong kaayusan ng panlipunan</li>
+            <li>Kasaganaan at kasarinlan</li>
+            <li>Kalayaan sa kahirapan, hanapbuhay para sa lahat, umaangat na istandard ng pamumuhay, at mainam na uri ng buhay para sa lahat</li>
+            <li>Sapat na mga lingkurang panlipunan</li>
+            <li>Katarungang panlipunan</li>
+        </ul>
+
+        <h2>ANTAS NG KAUNLARAN NG BANSA</h2>
+        <ul>
+            <li><b>Maunlad na Bansa:</b> Mataas na GDP, income per capita, at HDI</li>
+            <li><b>Umuunlad na Bansa:</b> May industriyang pinauunlad ngunit hindi mataas ang industriyalisasyon; hindi pantay ang GDP at HDI</li>
+            <li><b>Papaunlad na Bansa:</b> Kulang sa industriyalisasyon; mababang antas ng agrikultura at mababang GDP, income per capita, at HDI</li>
+        </ul>
+
+        <h2>MGA TUNGKULIN NG MAMAMAYAN</h2>
+        <ul>
+            <li>Suportahan ang pamahalaan</li>
+            <li>Sundin at igalang ang batas</li>
+            <li>Alagaan ang kapaligiran</li>
+            <li>Tumulong sa pagpuksa sa korapsyon</li>
+            <li>Maging produktibo</li>
+            <li>Tangkilikin ang mga produktong Pilipino</li>
+            <li>Magtipid ng enerhiya</li>
+            <li>Makilahok sa mga gawaing pansibiko</li>
+        </ul>
+
+        <button class="quiz-btn" onclick="lessonQuiz(1)">Quiz: Pambansang Kaunlaran</button>
+    </div>
+    <div class="images">
+        <img src="pk1.png">
+        <img src="pk2.png">
+    </div>
+</div>
+
+<!-- LESSON 2: Agrikultura -->
+<div class="section">
+    <div class="text">
+        <h1>Agrikultura</h1>
+        <p>Isang agham at sining na may kinalaman sa pagpaparami ng mga hayop at mga tanim o halaman.</p>
+
+        <h2>MGA GAWAIN SA AGRIKULTURA</h2>
+        <ul>
+            <li>Pagsasaka</li>
+            <li>Pangingisda</li>
+            <li>Paghahayupan</li>
+            <li>Paggugubat/Pagtotroso</li>
+        </ul>
+
+        <h2>GAMPANIN NG AGRIKULTURA</h2>
+        <h3>Kahalagahan</h3>
+        <ul>
+            <li>Pinagmumulan ng pagkain</li>
+            <li>Hilaw na materyales</li>
+            <li>Trabaho sa maraming Pilipino</li>
+            <li>Pinagkukunan ng sobrang manggagawa para sa ibang sektor</li>
+            <li>Nagpapasok ng dolyar</li>
+        </ul>
+
+        <h3>Suliranin</h3>
+        <ul>
+            <li>Pagsasaka: kakulangan ng lupa, teknolohiya, suporta</li>
+            <li>Pangingisda: polusyon, mapanirang operasyon</li>
+            <li>Paghahayupan: peste</li>
+            <li>Paggugubat: pagkaubos ng yaman</li>
+        </ul>
+
+        <h3>Mga Patakaran at Programa</h3>
+        <ul>
+            <li>Encomienda System (Kastila)</li>
+            <li>Land Registration Act & Public Land Act (Amerikano)</li>
+            <li>Agricultural Land Reform Code of 1963 (Macapagal)</li>
+            <li>CARP at iba pang batas (1988 at kasalukuyan)</li>
+        </ul>
+
+        <h3>Programa para sa Magsasaka</h3>
+        <ul>
+            <li>Bag-ugan (bagsakan)</li>
+            <li>Gulayan</li>
+            <li>Scholarship Programs</li>
+            <li>Agrarian Reform Zones</li>
+        </ul>
+
+        <h3>Sangay ng Pamahalaan</h3>
+        <ul>
+            <li>Department of Agriculture (DA)</li>
+            <li>Bureau of Fisheries and Aquatic Resources (BFAR)</li>
+            <li>Bureau of Animal Industry (BAI)</li>
+            <li>Ecosystem Research and Development Bureau (ERDB)</li>
+            <li>Landbank of the Philippines</li>
+        </ul>
+
+        <button class="quiz-btn" onclick="lessonQuiz(2)">Quiz: Agrikultura</button>
+    </div>
+    <div class="images">
+        <img src="ag1.jpg">
+        <img src="ag2.jpg">
+    </div>
+</div>
+
+<!-- LESSON 3: Industriya -->
+<div class="section">
+    <div class="text">
+        <h1>Industriya</h1>
+        <p>Tumutukoy sa pagproseso ng mga hilaw na materyal at paggawa ng mga produkto na kinakailangan para sa pampublikong pamilihan.</p>
+
+        <h2>Sub-sektor</h2>
+        <ul>
+            <li>Pagmimina</li>
+            <li>Pagmamanupaktura</li>
+            <li>Konstruksyon</li>
+            <li>Utilities</li>
+        </ul>
+
+        <h2>Kahalagahan</h2>
+        <ul>
+            <li>Hanapbuhay sa Pilipino</li>
+            <li>Pagpasok ng dolyar</li>
+            <li>Paggamit ng teknolohiya</li>
+            <li>Produksyon ng intermediate products</li>
+        </ul>
+
+        <h2>Suliranin</h2>
+        <ul>
+            <li>Pondo at kompetisyon</li>
+            <li>Paghina ng lokal na industriya</li>
+            <li>Demand</li>
+        </ul>
+
+        <h2>Mga Patakaran at Batas</h2>
+        <ul>
+            <li>Filipino First Policy</li>
+            <li>Oil Deregulation Law</li>
+            <li>Microfinancing, Online Business</li>
+            <li>BOT, Asset Privatization Trust</li>
+        </ul>
+
+        <h2>Sangay ng Pamahalaan</h2>
+        <ul>
+            <li>Department of Trade and Industry (DTI)</li>
+            <li>Board of Investments (BOI)</li>
+            <li>Philippine Economic Zone Authority (PEZA)</li>
+            <li>Securities and Exchange Commission (SEC)</li>
+        </ul>
+
+        <button class="quiz-btn" onclick="lessonQuiz(3)">Quiz: Industriya</button>
+    </div>
+    <div class="images">
+        <img src="ind1.jpg">
+        <img src="ind2.jpg">
+    </div>
+</div>
+
+<!-- LESSON 4: Sektor ng Paglilingkod -->
+<div class="section">
+    <div class="text">
+        <h1>Sektor ng Paglilingkod</h1>
+        <p>Ang umaalalay sa buong yugto ng produksyon, distribusyon, kalakalan, at pagkonsumo ng mga produkto sa loob o labas ng bansa.</p>
+
+        <h2>Pormal na Sektor</h2>
+        <ul>
+            <li>Transportasyon, komunikasyon, imbakan</li>
+            <li>Kalakalan</li>
+            <li>Pananalapi</li>
+            <li>Paupahang bahay at real estate</li>
+            <li>Paglilingkod ng pribado at pampubliko</li>
+        </ul>
+
+        <h2>Sangay ng Pamahalaan</h2>
+        <ul>
+            <li>DOLE, OWWA, POEA, TESDA, PRC, CHED</li>
+        </ul>
+
+        <h2>Karapatan ng Manggagawa</h2>
+        <ul>
+            <li>Holiday Pay, Wage Rationalization</li>
+            <li>Premium Pay, Overtime Pay, Night Shift Differential</li>
+            <li>Service Charges, Service Incentive Leave</li>
+            <li>Maternity & Paternity Leave</li>
+            <li>Thirteenth Month Pay, Employee Compensation Program</li>
+        </ul>
+
+        <h2>Impormal na Sektor</h2>
+        <ul>
+            <li>Walang pormal na dokumento, hindi nakasama sa GDP</li>
+            <li>Halimbawa: street vendors, pedicab driver, karpintero</li>
+            <li>Katangian: hindi nakarehistro, hindi nagbabayad ng buwis</li>
+        </ul>
+
+        <h2>Batas at Programa para sa Impormal na Sektor</h2>
+        <ul>
+            <li>R.A 8425, R.A 9710, P.D 422, R.A 7796, R.A 8282, R.A 7875</li>
+            <li>Mga programa: DILP, SEA-K, ISLA, CWP, 4Ps</li>
+        </ul>
+
+        <button class="quiz-btn" onclick="lessonQuiz(4)">Quiz: Sektor ng Paglilingkod</button>
+    </div>
+    <div class="images">
+        <img src="serv1.jpg">
+        <img src="serv2.jpg">
+    </div>
+</div>
+
+<!-- LESSON 5: Impormal na Sektor -->
+<div class="section">
+    <div class="text">
+        <h1>Impormal na Sektor</h1>
+        <p>Sektor ng ekonomiya na walang pormal o salat sa mga dokumentong kailangan sa pagsasagawa ng gawaing pang-ekonomiya. Ang kita ng sektor na ito ay HINDI naisasama sa kabuuang Gross Domestic Product (GDP) ng bansa.</p>
+
+        <h2>Halimbawa ng Impormal na Sektor</h2>
+        <ul>
+            <li>Nagtitinda sa kalsada</li>
+            <li>Pedicab driver</li>
+            <li>Karpintero</li>
+            <li>Hindi rehistradong pampublikong sasakyan</li>
+        </ul>
+
+        <h2>Katangian</h2>
+        <ul>
+            <li>Hindi nakarehistro sa pamahalaan</li>
+            <li>Hindi nagbabayad ng buwis mula sa kinita</li>
+            <li>Walang legal at pormal na balangkas mula sa pamahalaan para sa pagnenegosyo</li>
+        </ul>
+
+        <h2>Epekto sa Ekonomiya</h2>
+        <ul>
+            <li>Pagbaba ng halaga ng nalilikom na buwis</li>
+            <li>Banta sa kapakanan ng mga mamimili</li>
+            <li>Paglaganap ng mga ilegal na gawain</li>
+        </ul>
+
+        <h2>MGA BATAS AT PROGRAMA</h2>
+        <ul>
+            <li>Social Reform and Poverty Alleviation Act of 1997 (R.A 8425)</li>
+            <li>Magna Carta of Women (R.A 9710)</li>
+            <li>Philippine Labor Code (P.D 422)</li>
+            <li>Technical Education and Skills Development Act (R.A 7796)</li>
+            <li>Social Security Act of 1997 (R.A 8282)</li>
+            <li>National Health Insurance Act of 1995 (R.A 7875)</li>
+        </ul>
+
+        <h2>Programa para sa Mamamayan</h2>
+        <ul>
+            <li>Dole Integrated Livelihood Program (DILP)</li>
+            <li>Self-Employment Assistance-Kaunlaran (SEA-K)</li>
+            <li>Inclusion Support for Livelihood Advancement (ISLA)</li>
+            <li>Cash-for-Work Program (CWP)</li>
+            <li>Philippine Conditional Cash Transfer Program (4Ps)</li>
+        </ul>
+
+        <button class="quiz-btn" onclick="lessonQuiz(5)">Quiz: Impormal na Sektor</button>
+    </div>
+    <div class="images">
+        <img src="imp1.jpg">
+        <img src="imp2.jpg">
+    </div>
+</div>
+
+<!-- LESSON 6: Kalakalang Panlabas -->
+<div class="section">
+    <div class="text">
+        <h1>Kalakalang Panlabas</h1>
+        <p>Ang ugnayan ng Pilipinas sa ibang bansa sa pamamagitan ng palitan ng produkto, serbisyo, at kalakalan.</p>
+
+        <h2>Ekspor at Impor</h2>
+        <ul>
+            <li><b>Eksport:</b> Pagluluwas ng produkto sa ibang bansa</li>
+            <li><b>Import:</b> Pag-aangkat ng produkto mula sa ibang bansa</li>
+        </ul>
+
+        <h2>Mahalagang Organisasyon</h2>
+        <ul>
+            <li>World Trade Organization (WTO)</li>
+            <li>ASEAN Free Trade Area (AFTA)</li>
+            <li>Philippine Exporters Confederation (PHILEXPORT)</li>
+        </ul>
+
+        <h2>Suliranin</h2>
+        <ul>
+            <li>Trade deficit</li>
+            <li>Pagdepende sa import</li>
+            <li>Kakulangan sa local producers</li>
+        </ul>
+
+        <h2>Mga Patakaran</h2>
+        <ul>
+            <li>Philippine Tariff Commission</li>
+            <li>Philippine Board of Investments</li>
+        </ul>
+
+        <button class="quiz-btn" onclick="lessonQuiz(6)">Quiz: Kalakalang Panlabas</button>
+    </div>
+    <div class="images">
+        <img src="trade1.jpg">
+        <img src="trade2.jpg">
+    </div>
+</div>
+
+<!-- LESSON 7: Reple -->
+<div class="section">
+    <div class="text">
+        <h1>Repleksyon</h1>
+        <p>Ito ay huling aralin sa ika-apat na kwarter na nagbubuod at nagpapakita ng kabuuang kaalaman mula sa mga nakaraang leksyon.</p>
+
+        <h2>Buod ng Aralin</h2>
+        <ul>
+            <li>Pag-unlad ng bansa ay nakabatay sa pormal at impormal na sektor</li>
+            <li>Agrikultura at industriya ay pundasyon ng ekonomiya</li>
+            <li>Kalakalang panlabas ay mahalaga sa kita at relasyon ng bansa sa mundo</li>
+            <li>Mamamayan ay may tungkulin sa pagpapaunlad ng bansa</li>
+        </ul>
+
+        <h2>Repleksyon</h2>
+        <p>Mahalaga ang bawat sektor sa kaunlaran ng bansa sapagkat ang mga ito ay nagtutulungan upang mapaunlad ang ekonomiya at mapabuti ang pamumuhay ng mga mamamayan. Ang agrikultura, industriya, at serbisyo ay may kanya-kanyang papel na ginagampanan upang matugunan ang pangangailangan ng lipunan. Dahil dito, mahalagang maunawaan ng bawat mamamayan kung paano nakaaapekto ang mga sektor na ito sa pang-araw-araw na pamumuhay.
+
+Ang kaalaman tungkol sa ekonomiya at lipunan ay dapat magamit sa pang-araw-araw na buhay at sa paggawa ng mga tamang desisyon. Sa pamamagitan ng pag-unawa sa mga konseptong ito, nagiging mas maingat at responsable ang isang tao sa paggamit ng yaman, sa pagtulong sa komunidad, at sa pakikilahok sa mga gawaing makapagpapabuti sa bansa. Bilang responsableng mamamayan, mahalaga na gamitin ang natutunang kaalaman upang makapag-ambag sa pag-unlad ng lipunan at sa pagbuo ng isang mas maayos at masaganang kinabukasan para sa lahat.
+</p>
+
+        
+    </div>
+   
+</div>
+
+<script>
+function checkAnswers() {
+    const a1 = document.getElementById('q1').value.trim().toLowerCase().replace(/\s+/g,' ');
+    const a2 = document.getElementById('q2').value.trim().toLowerCase().replace(/\s+/g,' ');
+    const a3 = document.getElementById('q3').value.trim().toLowerCase().replace(/\s+/g,' ');
+
+    if(a1 === 'pambansang kaunlaran' && a2 === 'agrikultura' && a3 === 'industriya'){
+        document.getElementById('quiz-container').style.display = 'none';
+        document.querySelector('.back').style.display = 'block';
+    } else {
+        alert('One or more answers are incorrect. Please try again.');
+    }
+}
+
+
+function lessonQuiz(lessonNumber){
+    let question='', answer='';
+    switch(lessonNumber){
+        case 1: question='Ano ang ibig sabihin ng Pag-unlad ayon sa Pambansang Kaunlaran?'; answer='pagbabago mula sa mababa tungo sa mataas na antas ng pamumuhay'; break;
+        case 2: question='Ano ang pangunahing gawain sa Agrikultura?'; answer='pagsasaka'; break;
+        case 3: question='Ano ang pangunahing layunin ng Industriya?'; answer='pagproseso ng mga hilaw na materyal at paggawa ng mga produkto'; break;
+        case 4: question='Ano ang isang halimbawa ng Pormal na Sektor sa Paglilingkod?'; answer='transportasyon'; break;
+        case 5: question='Ano ang pangunahing katangian ng Impormal na Sektor?'; answer='hindi nakarehistro sa pamahalaan'; break;
+        case 6: question='Ano ang ibig sabihin ng Eksport?'; answer='pagluluwas'; break;
+    }
+    let userAnswer = prompt(question).trim().toLowerCase();
+    if(userAnswer === answer){
+        alert('Tama!');
+    } else {
+        alert('Mali! Tamang sagot: ' + answer);
+    }
+}
+</script>
+
+
+
+</body>
+</html>

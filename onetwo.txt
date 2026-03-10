@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Me</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gaegu', fantasy;
+    background-image: url("end.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+
+/* Back Button */
+.back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 12px 20px;
+    background: rgba(155, 89, 182, 1); /* solid purple */
+    border: 3px solid white;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    z-index: 999; /* in front of sections */
+    border-radius: 10px;
+}
+
+/* Section layout */
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 10%;
+    min-height: 100vh;
+    border: 4px solid white;
+    border-radius: 15px;
+    margin: 30px 5%;
+    background: rgba(155, 89, 182, 0.5); /* semi-transparent purple */
+}
+
+.text {
+    width: 50%;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.image {
+    width: 40%;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 15px;
+    border: 4px solid white;
+}
+
+/* Titles without borders */
+.title-section {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.title-section h1 {
+    font-size: 80px; /* bigger title */
+}
+
+/* Floating particles */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.particles span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #9b59b6; /* purple */
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: float linear infinite;
+}
+
+.particles span:nth-child(1){left:5%; animation-duration:10s;}
+.particles span:nth-child(2){left:15%; animation-duration:12s;}
+.particles span:nth-child(3){left:25%; animation-duration:14s;}
+.particles span:nth-child(4){left:35%; animation-duration:16s;}
+.particles span:nth-child(5){left:45%; animation-duration:11s;}
+.particles span:nth-child(6){left:55%; animation-duration:13s;}
+.particles span:nth-child(7){left:65%; animation-duration:15s;}
+.particles span:nth-child(8){left:75%; animation-duration:12s;}
+.particles span:nth-child(9){left:85%; animation-duration:14s;}
+.particles span:nth-child(10){left:95%; animation-duration:16s;}
+
+@keyframes float {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(110vh); }
+}
+</style>
+
+</head>
+<body>
+
+<a class="back" href="ict.html">Back to Home</a>
+
+<!-- 1st Quarter Title -->
+
+<div class="title-section">
+    <h1>1st Quarter</h1>
+    <p>Start of the 1st quarter sections.</p>
+</div>
+
+<!-- Sections with Lessons 1–9 -->
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 1: XHTML</h1>
+        <p>
+        eXtensible HyperText Markup Language (XHTML). 
+        The "x" came from XML or eXtensible Mark-up Language. 
+        Though different from HTML, XHTML also uses the filename extension .html. 
+        Stricter and cleaner version of HTML. All new Web browsers support XHTML.
+        </p>
+        <ul>
+            <li>Proper Nesting: <b><i>Correct:</i></b> &lt;b&gt;&lt;i&gt;Text&lt;/i&gt;&lt;/b&gt;</li>
+            <li>Proper Tag Closing: &lt;p&gt;XHTML requires proper closing of tags.&lt;/p&gt;</li>
+            <li>Elements in lowercase: &lt;p&gt;Text&lt;/p&gt;</li>
+            <li>One Root Element: &lt;html&gt; ... &lt;/html&gt;</li>
+            <li>Attributes in lowercase, quoted values, forbidden attribute minimization</li>
+            <li>Image Alternate Texts: &lt;img src="blackcat.jpg" alt="a picture of a black cat"/&gt;</li>
+            <li>Ampersands in URLs: &lt;a href="dataLibrary.php?page=12&amp;style=green"&gt;link&lt;/a&gt;</li>
+        </ul>
+    </div>
+    <div class="image"><img src="mep1.png"></div>
+</div>
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 2: HTML Lists</h1>
+        <p>Used to specify lists of information. Three types of HTML lists:</p>
+        <ul>
+            <li>Ordered List: &lt;ol&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ol&gt;</li>
+            <li>Unordered List: &lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</li>
+            <li>Description List: &lt;dl&gt;&lt;dt&gt;Term&lt;/dt&gt;&lt;dd&gt;Definition&lt;/dd&gt;&lt;/dl&gt;</li>
+        </ul>
+        <p>Nested lists allow hierarchy: lists within lists.</p>
+    </div>
+    <div class="image"><img src="mep2.png"></div>
+</div>
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 3: HTML Tables</h1>
+        <p>Tables organize data into rows and columns. Attributes include:</p>
+        <ul>
+            <li>&lt;table&gt;: align, bgcolor, border, bordercolor, cellpadding, cellspacing, width</li>
+            <li>&lt;tr&gt;: align, valign, bgcolor, height</li>
+            <li>&lt;td&gt;: align, valign, bgcolor, width, height, background, nowrap</li>
+            <li>Colspan & Rowspan for merging cells</li>
+        </ul>
+    </div>
+    <div class="image"><img src="mep3.png"></div>
+</div>
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 4: HTML Tables 2</h1>
+        <ul>
+            <li>Merge cells horizontally: colspan attribute</li>
+            <li>Merge cells vertically: rowspan attribute</li>
+            <li>Combine colspan and rowspan to merge multiple rows & columns</li>
+            <li>Nesting tables for complex layout</li>
+            <li>Adding images in table cells: &lt;td&gt;&lt;img src="..."&gt;&lt;/td&gt;</li>
+        </ul>
+    </div>
+    <div class="image"><img src="me4.png"></div>
+</div>
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 5: Hyperlinks</h1>
+        <p>Hyperlinks allow navigation between pages:</p>
+        <ul>
+            <li>Absolute URL: link to another server</li>
+            <li>Relative URL: link within the same server</li>
+            <li>Named Anchor: link to a section in same page</li>
+            <li>Target attribute: _blank, _self, _parent, _top</li>
+            <li>Email links: &lt;a href="mailto:example@mail.com"&gt;Email&lt;/a&gt;</li>
+            <li>Using graphics as links: &lt;a href="url"&gt;&lt;img src="image.gif"&gt;&lt;/a&gt;</li>
+        </ul>
+    </div>
+    <div class="image"><img src="me5.png"></div>
+</div>
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 6: HTML Forms</h1>
+        <ul>
+            <li>Forms gather information using &lt;form&gt;...</li>
+            <li>Attributes: action (URL), method (get/post)</li>
+            <li>Input types: text, password, checkbox, radio, submit, reset</li>
+            <li>New HTML5 inputs: color, date, datetime, email, month, number, range, search, tel, time, url</li>
+        </ul>
+    </div>
+    <div class="image"><img src="me6.png"></div>
+</div>
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 7: HTML Forms 2</h1>
+        <ul>
+            <li>Textboxes: single-line text input using &lt;input type="text"&gt;</li>
+            <li>Textareas: multi-line input using &lt;textarea&gt;&lt;/textarea&gt;</li>
+            <li>Attributes for textarea: name, rows, cols, wrap (soft/hard/off)</li>
+            <li>Radio buttons: choose only one option</li>
+        </ul>
+    </div>
+    <div class="image"><img src="me7.png"></div>
+</div>
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 8: HTML Forms 3</h1>
+        <ul>
+            <li>Checkboxes: choose multiple options</li>
+            <li>Drop-down menus: &lt;select&gt;&lt;option&gt;&lt;/option&gt;&lt;/select&gt;</li>
+            <li>Email feedback forms: &lt;form action="mailto:..." method="get"&gt;</li>
+            <li>Submit & Reset buttons: &lt;input type="submit"&gt;, &lt;input type="reset"&gt;</li>
+            <li>File input: &lt;input type="file" accept=".jpg,.png"&gt;</li>
+        </ul>
+    </div>
+    <div class="image"><img src="me8.png"></div>
+</div>
+
+<div class="section">
+    <div class="text">
+        <h1>Lesson 9: CSS</h1>
+        <p>Cascading Style Sheets (CSS) define the presentation layer of a webpage.</p>
+        <ul>
+            <li>Separates content (HTML) from presentation (CSS) and behavior (JavaScript)</li>
+            <li>Benefits: saves time, easy maintenance, better design</li>
+            <li>Capabilities: positioning, layering, styling elements, custom tags</li>
+            <li>Advantages: faster download, multiple linked stylesheets, consistent appearance</li>
+        </ul>
+    </div>
+    <div class="image"><img src="me9.png"></div>
+</div>
+
+<!-- 2nd Quarter Title -->
+<div class="title-section">
+    <h1>2nd Quarter</h1>
+    <p>Start of the 2nd quarter sections.</p>
+</div>
+
+<!-- Section 10: CSS Introduction -->
+<div class="section">
+    <div class="text">
+        <h1>Lesson 1-2: Cascading Style Sheet (CSS)</h1>
+        <p>CSS defines how HTML elements are displayed on media. Benefits:</p>
+        <ul>
+            <li>Saves work and time</li>
+            <li>External stylesheets stored in .css files</li>
+            <li>Separates content (HTML) from presentation (CSS)</li>
+        </ul>
+        <p><b>Layers of Webpage:</b> Content (HTML), Presentation (CSS), Behavior (JavaScript)</p>
+    </div>
+    <div class="image"><img src="css1.png"></div>
+</div>
+
+<!-- Section 11: CSS Selectors -->
+<div class="section">
+    <div class="text">
+        <h1>Lesson 3: CSS Selectors</h1>
+        <ul>
+            <li><b>Element Selector:</b> Applies to tags (p, h1, div)</li>
+            <li><b>ID Selector:</b> Unique identifier (#id)</li>
+            <li><b>Class Selector:</b> Multiple elements (.<class>)</li>
+            <li><b>Universal Selector:</b> Selects all elements (*)</li>
+            <li><b>Group Selector:</b> Multiple elements grouped (h1, p)</li>
+            <li><b>Attribute Selector:</b> Select by attribute (p[class])</li>
+        </ul>
+    </div>
+    <div class="image"><img src="css2.png"></div>
+</div>
+
+<!-- Section 12: CSS Display & Box Model -->
+<div class="section">
+    <div class="text">
+        <h1>Lesson 4-5: Display & Box Model</h1>
+        <ul>
+            <li><b>Display Property:</b> block, inline, list-item, none, inherit</li>
+            <li><b>Div Tag:</b> Block-level container</li>
+            <li><b>Span Tag:</b> Inline container</li>
+            <li><b>Box Model:</b> Content + padding + border + margin</li>
+            <li><b>Positioning:</b> static, relative, absolute, fixed</li>
+            <li><b>Float:</b> left, right, none (used to wrap text around elements)</li>
+        </ul>
+    </div>
+    <div class="image"><img src="css3.png"></div>
+</div>
+
+<!-- Section 13: Typography -->
+<div class="section">
+    <div class="text">
+        <h1>Lesson 6: Typography</h1>
+        <ul>
+            <li><b>Font Properties:</b> font-family, font-style, font-weight, font-size, font-variant</li>
+            <li><b>Text Properties:</b> text-align, text-decoration, text-transform, line-height, text-indent</li>
+            <li>Use generic fonts as fallback: Serif, Sans-serif</li>
+            <li>Default font: Times New Roman, size 16px</li>
+        </ul>
+    </div>
+    <div class="image"><img src="css4.png"></div>
+</div>
+
+<!-- Section 14: Lists, Pseudo-classes & Pseudo-elements -->
+<div class="section">
+    <div class="text">
+        <h1>Lesson 7: Lists & Pseudo</h1>
+        <ul>
+            <li><b>List Styles:</b> type, image, position, list-style shorthand</li>
+            <li>Bullet types: disc, circle, square, decimal, lower-roman, upper-alpha, etc.</li>
+            <li><b>Pseudo-classes:</b> :link, :visited, :hover, :active, :focus</li>
+            <li><b>Pseudo-elements:</b> :first-letter, :first-line, :before, :after</li>
+        </ul>
+    </div>
+    <div class="image"><img src="css5.png"></div>
+</div>
+
+<div class="particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+</body>
+</html>

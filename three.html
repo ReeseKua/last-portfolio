@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3rd Quarter - JavaScript Lessons</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gaegu', fantasy;
+    background-image: url("nether.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+
+/* Back Button */
+.back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 12px 20px;
+    background: rgba(255, 165, 0, 1); /* solid orange */
+    border: 3px solid white;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    z-index: 999; /* in front of sections */
+    border-radius: 10px;
+}
+
+/* Section layout */
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    min-height: 100vh;
+    border: 4px solid white;
+    border-radius: 15px;
+    margin: 30px 5%;
+    background: rgba(255, 165, 0, 0.5); /* semi-transparent orange */
+}
+
+.text {
+    width: 55%;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.image {
+    width: 35%;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 15px;
+    border: 4px solid white;
+}
+
+/* Titles without borders */
+.title-section {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.title-section h1 {
+    font-size: 80px;
+}
+
+/* Floating particles */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.particles span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 165, 0, 0.7); /* orange */
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: float linear infinite;
+}
+
+.particles span:nth-child(1){left:5%; animation-duration:10s;}
+.particles span:nth-child(2){left:15%; animation-duration:12s;}
+.particles span:nth-child(3){left:25%; animation-duration:14s;}
+.particles span:nth-child(4){left:35%; animation-duration:16s;}
+.particles span:nth-child(5){left:45%; animation-duration:11s;}
+.particles span:nth-child(6){left:55%; animation-duration:13s;}
+.particles span:nth-child(7){left:65%; animation-duration:15s;}
+.particles span:nth-child(8){left:75%; animation-duration:12s;}
+.particles span:nth-child(9){left:85%; animation-duration:14s;}
+.particles span:nth-child(10){left:95%; animation-duration:16s;}
+
+@keyframes float {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(110vh); }
+}
+</style>
+</head>
+<body>
+
+<a class="back" href="ict.html">Back to Home</a>
+
+<!-- 3rd Quarter Title -->
+<div class="title-section">
+    <h1>3rd Quarter - JS Lessons</h1>
+    <p>JavaScript lessons from L1 to L6.</p>
+</div>
+
+<!-- Section 1: L1 Intro to JavaScript -->
+<div class="section">
+    <div class="text">
+        <h1>L1: Introduction to JavaScript</h1>
+        <p><strong>Script:</strong> a set of instructions connecting components for a task.</p>
+        <p>JavaScript is a powerful client-side scripting language created by Brendan Eich. It allows interactive web features, was initially called Mocha → LiveScript → JavaScript, and is not related to Java. Case-sensitive and embedded in HTML.</p>
+        <p><strong>Characteristics:</strong> Interpreted, Client-Side, OOP, Scripted Language.</p>
+    </div>
+    <div class="image"><img src="js1.png"></div>
+</div>
+
+<!-- Section 2: L2 More about JS -->
+<div class="section">
+    <div class="text">
+        <h1>L2: More About JavaScript</h1>
+        <p>JavaScript is client-side, high-level, interpreted, object-oriented. It reacts to events, validates data, creates cookies, and enhances webpages.</p>
+        <p><strong>Features:</strong> Dynamic typing, responsive, can detect user actions, works with CSS to produce DHTML.</p>
+        <p><strong>Disadvantages:</strong> Browser support limits, source code exposed, potential security risks.</p>
+    </div>
+    <div class="image"><img src="js2.png"></div>
+</div>
+
+<!-- Section 3: L3 JS Syntax -->
+<div class="section">
+    <div class="text">
+        <h1>L3: JavaScript Syntax</h1>
+        <p><strong>Terms:</strong> DOM, Parsing, Document Object Methods (write(), getElementById()), Document Object Properties (bgColor, fgColor).</p>
+        <p><strong>Syntax Guides:</strong> Quotes (' ' or " "), Comments (// or /* */), Concatenation (+).</p>
+    </div>
+    <div class="image"><img src="js3.png"></div>
+</div>
+
+<!-- Section 4: L4 Variables/Operators -->
+<div class="section">
+    <div class="text">
+        <h1>L4: Variables & Operators</h1>
+        <p><strong>Variables:</strong> Store values that may change. Declared with var or implicitly. Local vs global scope.</p>
+        <p><strong>Data Types:</strong> String, Integer, Float, Boolean, Object, Array, Undefined, Null.</p>
+        <p><strong>Operators:</strong> Arithmetic (+, -, *, /, %), Assignment (=, +=, -=, *=, /=, %=), Comparison (==, ===, !=, !==, >, <, >=, <=).</p>
+    </div>
+    <div class="image"><img src="js4.png"></div>
+</div>
+
+<!-- Section 5: L5 JS Operations/Functions -->
+<div class="section">
+    <div class="text">
+        <h1>L5: JS Operations & Functions</h1>
+        <p><strong>Operators:</strong> Logical (&&, ||), Concatenation (+ for strings), Math operations with assignment.</p>
+        <p><strong>Functions:</strong> Reusable code blocks. Defined using <code>function name(){}</code>. Can return values for further use.</p>
+        <p>Example: <code>var result = square(5);</code> where square() calculates x²/2.</p>
+    </div>
+    <div class="image"><img src="js5.png"></div>
+</div>
+
+<!-- Section 6: L6 Getting Started with JS -->
+<div class="section">
+    <div class="text">
+        <h1>L6: Getting Started with JS</h1>
+        <p>Use <code>&lt;script&gt;&lt;/script&gt;</code> to write JavaScript. Can place in head, body, or external file.</p>
+        <p><strong>Common Properties & Methods:</strong> window (location, open, setTimeout), document (write, cookie, fgColor), math (PI, pow), navigator (appName, platform).</p>
+        <p><strong>Events:</strong> Triggered by user actions. Syntax: <code>&lt;tag attribute="function()"&gt;</code></p>
+    </div>
+    <div class="image"><img src="js6.png"></div>
+</div>
+
+<!-- Events Title -->
+<div class="title-section">
+    <h1>Events</h1>
+    <p>Special events or important moments.</p>
+</div>
+
+<!-- MVP Event -->
+<div class="section">
+    <div class="text">
+        <h1>MVP</h1>
+        <p>During the MVP event, I learned the importance of teamwork, discipline, and sportsmanship. I can apply this in real life by collaborating effectively in group projects, respecting others, and striving for excellence. I participated actively by joining games, cheering for my team, and helping organize activities. If I were to teach this topic to a classmate, I would explain that sports events build character, strengthen relationships, and teach valuable life skills. This event is important because it encourages students to be physically active, socially responsible, and motivated to succeed.</p>
+    </div>
+    <div class="image">
+        <img src="mvp.jpg" alt="MVP Event">
+        <p style="text-align:center; font-size:14px;">Photo Credit: Jade Imperial</p>
+    </div>
+</div>
+
+<!-- VPOP Event -->
+<div class="section">
+    <div class="text">
+        <h1>VPOP</h1>
+        <p>During the VPOP event, I learned how creativity and collaboration can produce engaging performances. I can apply this in real life by exploring creative outlets, practicing teamwork, and appreciating the arts. I participated actively by rehearsing, performing, and supporting my classmates. If I were to teach this topic to a classmate, I would explain that performing arts enhance self-expression, confidence, and cultural appreciation. This event is important because it nurtures talent, encourages collaboration, and celebrates creativity.</p>
+    </div>
+    <div class="image">
+        <img src="vpop.jpg" alt="VPOP Event">
+        <p style="text-align:center; font-size:14px;">Photo Credit: Jade Imperial</p>
+    </div>
+</div>
+
+<!-- Booklandia Event -->
+<div class="section">
+    <div class="text">
+        <h1>Booklandia</h1>
+        <p>During the Booklandia event, I learned the importance of reading, knowledge acquisition, and sharing ideas. I can apply this in real life by reading regularly, discussing books with friends, and applying lessons learned. I participated actively by exploring book displays, joining reading activities, and reflecting on the stories. If I were to teach this topic to a classmate, I would explain that reading develops imagination, critical thinking, and empathy. This event is important because it encourages students to value knowledge, literacy, and lifelong learning.</p>
+    </div>
+    <div class="image">
+        <img src="booklandia.jpg" alt="Booklandia Event">
+        <p style="text-align:center; font-size:14px;">Photo Credit: Jade Imperial</p>
+    </div>
+</div>
+<!-- Floating Particles -->
+<div class="particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+</body>
+</html>
+

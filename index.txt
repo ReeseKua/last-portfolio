@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Minecraft Portfolio</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+font-family: fantasy;
+height: 100vh;
+background-image: url("minecraft.webp");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* LOGIN BOX */
+#login {
+text-align: center;
+background: rgba(0,0,0,0.6);
+padding: 40px;
+border: 4px solid black;
+}
+
+#login input {
+padding: 10px;
+font-size: 18px;
+margin-top: 10px;
+}
+
+#login button {
+display: block;
+width: 200px;
+margin: 15px auto;
+padding: 10px;
+font-size: 18px;
+background: #c6c6c6;
+border: 4px solid #000;
+box-shadow: inset -4px -4px #555, inset 4px 4px #fff;
+}
+
+/* MENU */
+.menu {
+text-align: center;
+}
+
+/* Minecraft buttons */
+.mc-button {
+display: block;
+width: 340px;
+margin: 18px auto;
+padding: 18px;
+font-size: 26px;
+color: black;
+background: #c6c6c6;
+border: 4px solid #000;
+box-shadow: inset -4px -4px #555, inset 4px 4px #fff;
+text-decoration: none;
+}
+
+.mc-button:hover {
+background: #b0b0b0;
+transform: scale(1.05);
+}
+
+h1 {
+color: white;
+margin-bottom: 30px;
+text-shadow: 3px 3px black;
+} </style>
+
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+
+<div id="login">
+    <h1>Enter World</h1>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="enterSite()">Start Game</button>
+</div>
+
+<!-- MENU -->
+
+<div class="menu" id="menu" style="display:none;">
+    <h1 id="welcome">Minecraft Portfolio</h1>
+    <a class="mc-button" href="aboutme.html">About Me</a>
+    <a class="mc-button" href="ict.html">ICT</a>
+    <a class="mc-button" href="ap.html">AP</a>
+</div>
+
+<script>
+function enterSite() {
+    var name = document.getElementById("username").value;
+    if (name.trim() !== "") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("menu").style.display = "block";
+        document.getElementById("welcome").innerText = "Welcome " + name + "!";
+    }
+}
+</script>
+
+</body>
+</html>
